@@ -1,0 +1,15 @@
+@extends('app')
+
+@section('content')
+	<h2>{{ $poblacion->nom }}</h2>
+	
+	@if ( !$poblacion->votants->count() )
+		La teva població no té votants.
+	@else
+		<ul>
+			@foreach ( $poblacion->votants as $votant)
+				<li><a href="{{ route('poblacions.votants.show', [$poblacion->slug, $votant->slug]) }}">{{ $votant->nom }}</a></li>
+			@endforeach
+		</ul>
+	@endif
+@endsection
