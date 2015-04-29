@@ -8,5 +8,5 @@ return [
 	'delete'=>'Elimina',
 	'noVotants'=>'No tienes ningún votante!',
 	'createVotant'=>'Crea un votante.',
-	'backPoblations'=>'Vuelve al menú de poblaciones.'
+	'backPoblacions'=>'Vuelve al menú de poblaciones.'
 ];

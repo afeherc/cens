@@ -4,7 +4,7 @@
 	<h2>{{ $poblacion->nom }}</h2>
 	
 	@if ( !$poblacion->votants->count() )
-		La teva població no té votants.
+		{{Lang::get('messages.noVotants')}}
 	@else
 		<ul>
 			@foreach ( $poblacion->votants as $votant)
@@ -12,9 +12,9 @@
 					{!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('poblacions.votants.destroy', $poblacion->slug, $votant->slug))) !!}
 					<a href="{{ route('poblacions.votants.show', [$poblacion->slug, $votant->slug]) }}">{{ $votant->nom }}</a>
 					(
-                    			{!! link_to_route('poblacions.votants.edit', 'Edita', array($poblacion->slug, $votant->slug), array('class' => 'btn btn-info')) !!},
+                    			{!! link_to_route('poblacions.votants.edit', Lang::get('messages.edit'), array($poblacion->slug, $votant->slug), array('class' => 'btn btn-info')) !!},
 
-                    {!! Form::submit('Elimina', array('class' => 'btn btn-danger')) !!}
+                    {!! Form::submit(Lang::get('messages.delete'), array('class' => 'btn btn-danger')) !!}
                 )
             {!! Form::close() !!}
         </li>
@@ -23,7 +23,7 @@
 @endif
 
 <p>
-{!! link_to_route('poblacions.index', 'Torna al menú poblacions') !!} |
-{!! link_to_route('poblacions.votants.create', 'Crea un votant', $poblacion->slug) !!}
+{!! link_to_route('poblacions.index', Lang::get('messages.backPoblations')) !!} |
+{!! link_to_route('poblacions.votants.create', Lang::get('messages.createVotant'), $poblacion->slug) !!}
 </p>
 @endsection
