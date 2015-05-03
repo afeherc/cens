@@ -1,12 +1,16 @@
 @extends('app')
 
 @section('content')
+	<div id="canv">
+	</div>
+	<button onclick="changeLang(this)">ca</button>
+
 	<h2>{{ Lang::get('messages.title') }}</h2>
 	
 	@if ( !$poblacions->count())
                 {{ Lang::get('messages.noPoblations') }}
         @else
-                <ul>
+                <dl>
                         @foreach( $poblacions as $poblacion )
                                 <li>
 					{!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('poblacions.destroy', $poblacion->slug))) !!}
@@ -19,10 +23,18 @@
                 
 				</li>
                         @endforeach
-                </ul>
+                </dl>
         @endif
 	<p>
 		{!! link_to_route('poblacions.create',Lang::get('messages.create')) !!}
 	</p>
-	{!! Form::button(App::setLocale('ca')) !!}
+	<script>
+		function changeLang(lang){
+			//document.getElementById('test').innerHTML=lang.innerHTML;
+			var idiom = lang.innerHTML;
+				document.getElementById('canv').innerHTML='{{ App::setLocale("ca") }}';
+				document.getElementById('test').innerHTML='<a href="{{route('poblacions.index') }}">Recarrega</a>'; 
+
+		}
+	</script>
 @endsection

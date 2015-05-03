@@ -52,8 +52,8 @@ return [
 	|
 	*/
 
-	'locale' => 'ca',
-
+	'locale' => 'en',
+	'locales'=>['en'=>'English','ca'=>'Catala'],
 	/*
 	|--------------------------------------------------------------------------
 	| Application Fallback Locale

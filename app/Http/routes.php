@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-
+//Route::get('/', ['as' => 'index', 'uses' => 'WelcomeController@index']);
+//Route::get('/','WelcomeController@index');
 //Route::get('home', 'HomeController@index');
+//$router->get('locale', ['as' => 'locale', 'uses' => 'PoblacionsController']);
+$router->get('/', ['as' => 'index', 'uses' => 'WelcomeController@index']);
+//$router->get();
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

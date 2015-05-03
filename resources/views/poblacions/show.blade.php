@@ -6,7 +6,7 @@
 	@if ( !$poblacion->votants->count() )
 		{{Lang::get('messages.noVotants')}}
 	@else
-		<ul>
+		<dl>
 			@foreach ( $poblacion->votants as $votant)
 				<li>
 					{!! Form::open(array('class' => 'form-inline', 'method' => 'DELETE', 'route' => array('poblacions.votants.destroy', $poblacion->slug, $votant->slug))) !!}
@@ -19,7 +19,7 @@
             {!! Form::close() !!}
         </li>
     @endforeach
-</ul>
+</dl>
 @endif
 
 <p>

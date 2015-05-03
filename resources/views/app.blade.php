@@ -17,6 +17,37 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<style>
+		@import url(//fonts.googleapis.com/css?family=Lato:700);
+		body {
+			margin:0;
+			font-family:'Lato', sans-serif;
+			text-align:center;
+			color: #999;
+		}
+		.welcome {
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -150px;
+			margin-top: -100px;
+		}
+		a, a:visited {
+			text-decoration:none;
+		}
+		h1 {
+			font-size: 32px;
+			margin: 16px 0 0 0;
+		}
+		menu { padding:0; }
+		menu ul {
+			list-style: none;
+			padding:0;
+		}
+		menu li { display:inline-block; }
+	</style>
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -65,7 +96,10 @@
 			@endforeach
 		</div>
 	@endif
+		<div id="test">
+		</div>
 	<!-- Scripts -->
+	
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>

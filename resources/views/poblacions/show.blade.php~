@@ -23,7 +23,7 @@
 @endif
 
 <p>
-{!! link_to_route('poblacions.index', Lang::get('messages.backPoblations') !!} |
+{!! link_to_route('poblacions.index', Lang::get('messages.backPoblations')) !!} |
 {!! link_to_route('poblacions.votants.create', Lang::get('messages.createVotant'), $poblacion->slug) !!}
 </p>
 @endsection
