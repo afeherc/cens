@@ -53,7 +53,7 @@ return [
 	*/
 
 	'locale' => 'en',
-	'locales'=>['en'=>'English','ca'=>'Catala'],
+	'locales'=>['en'=>'English','ca'=>'Català','es'=>'Español'],
 	/*
 	|--------------------------------------------------------------------------
 	| Application Fallback Locale

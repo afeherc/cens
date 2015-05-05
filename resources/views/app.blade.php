@@ -47,6 +47,11 @@
 			padding:0;
 		}
 		menu li { display:inline-block; }
+                .table {
+                    width: 400px;
+                    margin: auto auto;
+                    text-align: left;
+                }
 	</style>
 </head>
 <body>
